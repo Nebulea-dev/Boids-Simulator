@@ -1,33 +1,82 @@
-# TPL 2A POO - 2023-24
+# Board and Boids Simulator
 
-Les ressources distribuées contiennent:
+This project includes a collection of small board simulators and a boids simulator with preys and predators.
 
-- le sujet
-- une librairie d'affichage graphique d'un simulateur (lib/gui.jar) et sa documentation (doc/index.html)
-- un fichier de démonstration du simulateur (src/TestInvader.java)
+![Video of the boids simulator](images/Boids.gif)
+![Video of the immigration simulator](images/Immigration.gif)
 
-Une mini-introdution à la notation UML des diagrammes de classes est disponibe pour faciliter la lecture du sujet ([Fiche 7](https://programmation-orientee-objet.pages.ensimag.fr/poo/resources/fiches/07-UML/)).
+## Compilation
 
+1. Clone the repository:
 
-## Compilation & exécution
-### Avec un makefile?
-Un fichier Makefile est distribué pour facilement compiler et exécuter le fichier TestInvader.java
+    ```bash
+    git clone https://github.com/yourusername/board-and-boids-simulator.git
+    ```
 
-Mais vu la taille de ce projet, il est ***très fortement recommandé d'utiliser un IDE*** pour compiler, exécuter et déboguer votre code!
+2. Navigate to the project directory:
 
-### IDE Idea Intellij
-- créer un nouveau projet:
-    - menu *File/New Project*
-    - si le répertoire distribué est dans "~/Ensimag/2A/POO/TPL_2A_POO", alors paramétrer les champs *Name* avec "TPL_2A_POO" et *Location* avec "~/Ensimag/2A/POO/"
-- configurer l'utilisation de la librairie
-    - menu *File/Project Structure* puis *Projet setting/Modules*
-    - clicker sur(*Add* puis "JARs & Directories" et sélectionner ~/Ensimag/2A/POO/TPL_2A_POO/lib
-    - voir ici pour plus d'aide: https://stackoverflow.com/questions/1051640/correct-way-to-add-external-jars-lib-jar-to-an-intellij-idea-project
-- vous pouvez bien sûr utiliser git via l'interface d'idea Intellij
+    ```bash
+    cd board-and-boids-simulator
+    ```
 
-### IDE VS Code
-- dans "~/Ensimag/2A/POO/TPL_2A_POO", lancer *code ."
-- si vous avez installé les bonnes extensions java (exécution, debogage...) il est possible que tout fonctionne sans rien faire de spécial.
-- s'il ne trouve pas la librairie, vous devez alors créer un vrai "projet" et configurer l'import du .jar.
-- pas vraiment d'aide pour ça, vous trouverez
-- vous pouvez bien sûr utiliser git via l'interface de VS code
+3. Compile the project using the Makefile:
+
+    ```bash
+    make all
+    ```
+
+   This command will compile all the simulators and create executable files for each simulator.
+
+## Usage
+
+### Boids Simulator
+
+The Boids simulator simulates the behavior of flocking birds with preys and predators.
+
+1. **Run the Boids Simulator**:
+
+    ```bash
+    make runBoids
+    ```
+
+   This command compiles the Boids simulator and runs the executable to start the simulation.
+
+### Other Simulators
+
+You can also compile and run other simulators included in the project:
+
+- **Balls Simulator**:
+    ```bash
+    make runBalls
+    ```
+
+- **Game of Life Simulator**:
+    ```bash
+    make runGameOfLife
+    ```
+
+- **Game of Immigration Simulator**:
+    ```bash
+    make runGameOfImmigration
+    ```
+
+- **Schelling Simulator**:
+    ```bash
+    make runSchelling
+    ```
+
+## Cleaning Up
+
+If you want to clean up the compiled executables and object files, you can use:
+
+```bash
+make clean
+```
+
+## Contributing
+
+Contributions to optimize algorithms, improve documentation, or add new features are welcome! Please open issues or submit pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
