@@ -59,26 +59,13 @@ public class Boids implements Iterable<Boid> {
             sumOfForces.addVect(forceOfSeparation);
             sumOfForces.addVect(forceOfFleeing);
             sumOfForces.addVect(forceOfHunting);
-
-            System.out.println("forceOfCohesion :" + forceOfCohesion);
-            System.out.println("forceOfAlignment :" + forceOfAlignment);
-            System.out.println("forceOfSeparation :" + forceOfSeparation);
-            System.out.println("forceOfFleeing :" + forceOfFleeing);
-            System.out.println("forceOfHunting :" + forceOfHunting);
-
-            System.out.println("sumOfForces :" + sumOfForces+ "\n");
-
             boid.applyForce(sumOfForces);
 
-            System.out.println("boid avant :" + boid.getPosition());
             boid.updatePosition();
 
             double newX = ((boid.getPosition().getX() % MAX_WIDTH) + MAX_WIDTH) % MAX_WIDTH;  // date : 2h26 resoud le pb de disparition par le haut
             double newY = ((boid.getPosition().getY() % MAX_HEIGHT) + MAX_HEIGHT) % MAX_HEIGHT;  //jsp pas comment c possible
             boid.getPosition().setVector(new Vect(newX, newY));
-
-            System.out.println("boid apres :" + boid.getPosition()+ "\n");
-
         }
     }
 
